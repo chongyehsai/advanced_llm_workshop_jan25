@@ -6,7 +6,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
 
 # Initialize the language model and prompt template
-llm = ChatOpenAI(model='gpt-4', max_tokens=100)
+llm = ChatOpenAI(model='gpt-4', max_tokens=100, api_key = st.secrets['OPENAI_API_KEY'])
 str_parser = StrOutputParser()
 template = (
     "Please answer the questions based on the following content and your own judgment:\n"
